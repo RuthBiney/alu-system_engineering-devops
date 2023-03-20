@@ -7,3 +7,4 @@ then
 else
     host="$3@$2:~/"
     scp -o StrictHostKeyChecking=no -i $4 $1 $host
+fi
