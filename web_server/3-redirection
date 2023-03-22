@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configuring the nginx server to redirect to another page
+sudo apt-get update
+sudo apt-get -y install nginx
+newlines="\\\https://www.youtube.com/watch?v=cDiWGuqzzio;"
+sudo sed -1 "531 $newlines" /etc/nginx/sites-available/default
+sudo service nginx restart
