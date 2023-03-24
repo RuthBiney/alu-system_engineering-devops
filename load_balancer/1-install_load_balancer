@@ -14,8 +14,8 @@ frontend Local_Server
 backend Web_Servers
         balance roundrobin
         mode http
-	server 5496-web-01 18.207.93.144:80 check
-	server 5496-web-02 54.145.227.135:80 check
+	server web-01 18.207.93.144:80 check
+	server web-02 54.145.227.135:80 check
 EOF
 
 sudo service haproxy restart
